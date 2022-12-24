@@ -4,47 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/pokemonfavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <title>PokeApi</title>
+    <title>PokeApi - FeNriR</title>
 </head>
+
 <body>
+    <h1 class="mainlogo">
+        <img src="./images/pokemon_logo.png" alt="Pokemon Logo" class="pokemonlogo">
+        <img src="./images/pokeball.gif" alt="Pokeball gif" class="pokeball">
+    </h1>
+
     <main class="wrapper">
         <div class="searchsection">
             <div class="searchbar">
                 <input type="text" placeholder="Search Pokemon" class="search">
-                <button type="button">Search</button>
-            </div>
-            
-            <div class="icons">
-                <a href="#"><img src="images/sort.png" alt=""></a>
-                <a href="#"><img src="images/edit.png" alt=""></a>
-                <a href="#"><img src="images/delete.png" alt=""></a>
             </div>
 
+            <div class="icons">
+                <img src="./images/edit.png" alt="Editting icon" class="editicon">
+            </div>
         </div>
 
-
+        <div class="editsection">
+            <div class="editable">
+                <label for="pokeid">PokemonID: </label>
+                <input type="number" id="pokeid" min="1" max="50" required>
+                <label for="pokename">PokemonName: </label>
+                <input type="text" id="pokename" required>
+                <label for="pokeurl">PokemonURL: </label>
+                <input type="url" id="pokeurl" placeholder="https://example.com" required>
+                <button type="button" id="updatebtn">Update</button>
+            </div>
+            <div class="cross">
+                <img src="./images/cross.png" alt="Cross icon" class="crossicon">
+            </div>
+        </div>
 
         <table class="maintable">
-            <tr class="heading">
-                <th>ID</th>
-                <th>Pokemon Name</th>
-                <th>URL</th>
-            </tr>
+            <thead>
+                <tr class="heading">
+                    <th class="pokeID">
+                        <img src="./images/ascending.png" alt="Ascending" class="asciconid">
+                        Pokemon ID
+                        <img src="./images/descending.png" alt="descending" class="desciconid">
+                    </th>
+                    <th class="pokeName">
+                        <img src="./images/ascending.png" alt="Ascending" class="ascicon">
+                        Pokemon Name
+                        <img src="./images/descending.png" alt="descending" class="descicon">
+                    </th>
+                    <th>
+                        URL
+                    </th>
+                    <th>
+                        Delete
+                    </th>
+                </tr>
+            </thead>
 
-            <tbody class="tableinfo">
+            <tbody class="tableinfo" >
                 <tr class="tabledata">
-                    <td>1</td>
-                    <td>Pikachu</td>
-                    <td>http://pikachu.com</td>
+                    <!-- Table data will be loaded here -->
                 </tr>
             </tbody>
         </table>
     </main>
     
-
-
+    <footer>
+        <p>
+            Copyright © FeNriR
+        </p>
+    </footer>
 
     <script src="main.js" defer></script>
 </body>
+
 </html>

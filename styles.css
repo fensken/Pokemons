@@ -1,35 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700;800&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Dosis', sans-serif;
 }
+
+body {
+  background-image:linear-gradient(rgb(0,0,0,0.75), rgb(0,0,0,0.75)), url(./images/pokebg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* ----------------------heding section---------------- */
+
+.pokeball {
+    width: 2em;
+    border-radius: 50%;
+    margin-top: -.6em;
+}
+
+.pokemonlogo {
+    width: 6em;
+}
+
+.mainlogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------------------------ */
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     margin: auto;
-    margin-top: 4em;
+    margin-top: 2em;
     box-sizing: border-box;
-    /* background-color: aqua; */
+    background-color: rgba(245, 245, 245, 0.727);
+    border-radius: 1em;
 }
+
+
+/* -----------Search Section------------------------ */
 
 .searchsection {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    /* background-color: aquamarine; */
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.41);
+    padding-bottom: 1em;
 }
 
 .searchsection .searchbar {
     flex-shrink: 2;
-    flex-basis: 70%;
+    flex-basis: 90%;
     border-radius: .2em;
-    /* background-color: aquamarine; */
 }
 
 .searchbar input {
-    width: 80%;
+    width: 100%;
+    font-size: 1em;
+    background-color: whitesmoke;
+    border-radius: .3em;
+    padding: .5em;
+    padding-left: 6px; padding-right: 6px;
+    border: none;
+}
+
+.searchbar input:focus {
+    outline: invert;
+    outline-color: rgba(39, 39, 39, 0.396);
+}
+
+.searchbar button {
+    font-size: 1em;
+    padding: 0 .3em;
+    border-radius: .3em;
+    border-color: rgba(39, 39, 39, 0.396);
+}
+
+.searchbar button:hover {
+    cursor: pointer;
 }
 
 .searchsection .icons {
@@ -39,24 +100,152 @@
 }
 
 .icons img {
-    width: 1.3em;
+    width: 2.2em;
+}
+/* -------------------------------------------------------- */
+
+
+/* -----------------Editing section--------------------- */
+.editsection {
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.41);
+    padding-bottom: 1em;
+}
+
+.editable {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5em;
+    flex-basis: 90%;
+}
+
+.editable label, .editable button {
+    font-size: 1em;
+}
+
+.editsection button {
+    padding: 4px;
+    border-radius: .5em;
+    color: rgb(123, 120, 120);
+    border-color: rgba(39, 39, 39, 0.396);
+}
+.editsection button:hover {
+    cursor: pointer;
+    border-color: rgba(7, 151, 177, 0.215);
+    background-color: white;
+}
+
+.cross img {
+    width: 2.2em;
+    flex-basis: 10%;
+}
+
+#pokeid, #pokename, #pokeurl {
+    font-size: 1em;
+    background-color: whitesmoke;
+    border-radius: .3em;
+    padding: 2px;
+    border: none;
+}
+
+#pokeid {
+    width: 25%;
+}
+
+#pokename {
+    width: 60%;
+}
+
+#pokeurl {
+    width: 100%;
+}
+
+/* ----------------------------------------------------- */
+
+
+/* -------------------Tabel------------------------ */
+tbody tr td img {
+    width: 1.8em;
+}
+
+tbody tr td img:hover, .editicon:hover , .cross img:hover {
+    cursor: pointer;
+    border:3px solid rgb(255, 0, 0);
+    border-radius: 50%;
 }
 
 table {
-    border: 2px solid black;
-    width: 100%;
-    margin-top: 2em;
+    border: 2px solid rgba(0, 0, 0, 0.41);
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
     border-radius: .2em;
+    margin-bottom: 1em;
 }
-table td {
-    padding:0 2em 0 0;
-}
+   
+
 table th {
-    text-align: left;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.41);
+    font-size: 1.1em;
+    border-right: 1px solid rgba(0, 0, 0, 0.41);
 }
+
+table th img:first-child{
+    width: 1em;
+    margin-right: .5em;
+}
+table th img:last-child{
+    width: 1em;
+    margin-left: .5em;
+}
+
+table th img:first-child:hover, table th img:last-child:hover {
+    cursor: pointer;
+    border: 2px solid rgb(126, 126, 126);
+}
+
+.pokemonimage {
+    width: 2.5em;
+    border-radius: 50%;
+}
+
+.pokemonimage:hover {
+    cursor: auto;
+    border:none;
+}
+
+.pokeimgname {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .tableinfo td {
     text-transform: capitalize;
+    text-align: center;
+    font-size: 1em;
+    border-right: 1px solid rgba(0, 0, 0, 0.41);
+    padding-bottom: 1em;
+}
+
+
+.pokeID:hover, .pokeName:hover {
+    cursor: pointer;
+}
+
+
+table th:last-child, .tableinfo td:last-child {
+    border-right: none;
 }
 
 .tableinfo td a {
@@ -65,9 +254,39 @@ table th {
     color: rgba(45, 48, 48, 0.807);
 }
 
+.tableinfo tr td {
+    padding-top: 1em;
+}
+
 .tableinfo td a:hover {
     color: black;
     text-decoration: underline;
 }
 
+/* ------------------------------------------------- */
+
+
+/* ------------------------Footer---------------- */
+
+footer {
+    margin-top: 1em;
+    padding: .5em;
+    background-color: rgba(245, 245, 245, 0.727);
+    text-align:center;
+    font-size: 1em;
+    border-radius: .2em;
+    color: rgb(83, 83, 83);
+}
+
+
+/* --------------------------------------------- */
+
+
+@media (max-width: 970px) {
+
+    .wrapper {
+        width: 90%;
+    }
+
+}
 
