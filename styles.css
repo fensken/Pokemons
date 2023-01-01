@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Pokemon Solid', sans-serif;
+    font-size: .94rem;
 }
 
 body {
@@ -22,13 +23,13 @@ body {
 /* ----------------------heding section---------------- */
 
 .pokeball {
-    width: 2em;
+    width: 4em;
     border-radius: 50%;
     margin-top: -.6em;
 }
 
 .pokemonlogo {
-    width: 6em;
+    width: 15em;
 }
 
 .mainlogo {
