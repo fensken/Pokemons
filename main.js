@@ -1,29 +1,29 @@
 
 // Accessing HTML elements
-let search = document.querySelector('.search'),
-    searchsection = document.querySelector('.searchsection'),
-    tableinfo = document.querySelector('.tableinfo'),
-    pokeID= document.querySelector('.pokeID'),
-    pokeName= document.querySelector('.pokeName'),
+let search = document.querySelector('.search')
+let searchsection = document.querySelector('.searchsection')
+let tableinfo = document.querySelector('.tableinfo')
+let pokeID= document.querySelector('.pokeID')
+let pokeName= document.querySelector('.pokeName')
 
-    editicon= document.querySelector('.editicon'),
-    editsection= document.querySelector('.editsection'),
+let editicon= document.querySelector('.editicon')
+let editsection= document.querySelector('.editsection')
 
-    pokeid= document.querySelector('#pokeid'),
-    pokename= document.querySelector('#pokename'),
-    pokeurl= document.querySelector('#pokeurl'),
-    updatebtn= document.querySelector('#updatebtn'),
+let pokeid= document.querySelector('#pokeid')
+let pokename= document.querySelector('#pokename')
+let pokeurl= document.querySelector('#pokeurl')
+let updatebtn= document.querySelector('#updatebtn')
 
-    crossicon= document.querySelector('.crossicon'),
+let crossicon= document.querySelector('.crossicon')
 
-    asciconid= document.querySelector('.asciconid'),
-    desciconid= document.querySelector('.desciconid'),
+let asciconid= document.querySelector('.asciconid')
+let desciconid= document.querySelector('.desciconid')
 
-    ascicon= document.querySelector('.ascicon'),
-    descicon= document.querySelector('.descicon'),
+let ascicon= document.querySelector('.ascicon')
+let descicon= document.querySelector('.descicon')
 
-    pokemons=[],
-    pokemonList=[]
+let pokemons=[]
+let pokemonList=[]
 
 
 // --------------Fetch function---------------------------------------------
@@ -74,15 +74,20 @@ const pokemonFetch = async () => {
         
             deleteIcon.forEach((delbtn) => {
                 delbtn.addEventListener('click', () => {
-                    let delelmnt= delbtn.parentElement,
+                    let sure = confirm('Are you sure?')
+
+                    if (sure) {
+                        let delelmnt= delbtn.parentElement,
                         delelmnt2= delelmnt.parentElement
                     
-                    let i = pokemonList.findIndex((elem) => {
-                        return elem.pokemonId === parseInt(delbtn.id)
-                    })
+                        let i = pokemonList.findIndex((elem) => {
+                            return elem.pokemonId === parseInt(delbtn.id)
+                        })
 
-                    pokemonList.splice(i,1)
-                    delelmnt2.remove()
+                        pokemonList.splice(i,1)
+                        delelmnt2.remove()
+                    }
+                    
                 })
             })
 
@@ -118,15 +123,19 @@ const pokemonFetch = async () => {
             
                 deleteIcon.forEach((delbtn) => {
                     delbtn.addEventListener('click', () => {
-                        let delelmnt= delbtn.parentElement,
+                        let sure = confirm('Are you sure?')
+                        
+                        if (sure) {
+                            let delelmnt= delbtn.parentElement,
                             delelmnt2= delelmnt.parentElement
                         
-                        let j = pokemonList.findIndex((elem) => {
-                            return elem.pokemonId === parseInt(delbtn.id)
-                        })
-    
-                        pokemonList.splice(j,1)
-                        delelmnt2.remove()
+                            let j = pokemonList.findIndex((elem) => {
+                                return elem.pokemonId === parseInt(delbtn.id)
+                            })
+
+                            pokemonList.splice(j,1)
+                            delelmnt2.remove()
+                        }
                     })
                 })
     
@@ -170,15 +179,19 @@ const pokemonFetch = async () => {
             
                 deleteIcon.forEach((delbtn) => {
                     delbtn.addEventListener('click', () => {
-                        let delelmnt= delbtn.parentElement,
+                        let sure = confirm('Are you sure?')
+                        
+                        if (sure) {
+                            let delelmnt= delbtn.parentElement,
                             delelmnt2= delelmnt.parentElement
+                        
+                            let k = pokemonList.findIndex((elem) => {
+                                return elem.pokemonId === parseInt(delbtn.id)
+                            })
 
-                        let k = pokemonList.findIndex((elem) => {
-                            return elem.pokemonId === parseInt(delbtn.id)
-                        })
-    
-                        pokemonList.splice(k,1)
-                        delelmnt2.remove()
+                            pokemonList.splice(k,1)
+                            delelmnt2.remove()
+                        }
                     })
                 })
 
@@ -219,15 +232,19 @@ const pokemonFetch = async () => {
 
                 deleteIcon.forEach((delbtn) => {
                     delbtn.addEventListener('click', () => {
-                        let delelmnt= delbtn.parentElement,
+                        let sure = confirm('Are you sure?')
+                        
+                        if (sure) {
+                            let delelmnt= delbtn.parentElement,
                             delelmnt2= delelmnt.parentElement
+                        
+                            let l = pokemonList.findIndex((elem) => {
+                                return elem.pokemonId === parseInt(delbtn.id)
+                            })
 
-                        let l = pokemonList.findIndex((elem) => {
-                            return elem.pokemonId === parseInt(delbtn.id)
-                        })
-    
-                        pokemonList.splice(l,1)
-                        delelmnt2.remove()
+                            pokemonList.splice(l,1)
+                            delelmnt2.remove()
+                        }
                     })
                 })
             }
@@ -264,15 +281,19 @@ const pokemonFetch = async () => {
 
                 deleteIcon.forEach((delbtn) => {
                     delbtn.addEventListener('click', () => {
-                        let delelmnt= delbtn.parentElement,
+                        let sure = confirm('Are you sure?')
+                        
+                        if (sure) {
+                            let delelmnt= delbtn.parentElement,
                             delelmnt2= delelmnt.parentElement
+                        
+                            let m = pokemonList.findIndex((elem) => {
+                                return elem.pokemonId === parseInt(delbtn.id)
+                            })
 
-                        let m = pokemonList.findIndex((elem) => {
-                            return elem.pokemonId === parseInt(delbtn.id)
-                        })
-    
-                        pokemonList.splice(m,1)
-                        delelmnt2.remove()
+                            pokemonList.splice(m,1)
+                            delelmnt2.remove()
+                        }
                     })
                 })
             }
@@ -308,15 +329,19 @@ const pokemonFetch = async () => {
 
                 deleteIcon.forEach((delbtn) => {
                     delbtn.addEventListener('click', () => {
-                        let delelmnt= delbtn.parentElement,
+                        let sure = confirm('Are you sure?')
+                        
+                        if (sure) {
+                            let delelmnt= delbtn.parentElement,
                             delelmnt2= delelmnt.parentElement
+                        
+                            let n = pokemonList.findIndex((elem) => {
+                                return elem.pokemonId === parseInt(delbtn.id)
+                            })
 
-                        let n = pokemonList.findIndex((elem) => {
-                            return elem.pokemonId === parseInt(delbtn.id)
-                        })
-    
-                        pokemonList.splice(n,1)
-                        delelmnt2.remove()
+                            pokemonList.splice(n,1)
+                            delelmnt2.remove()
+                        }
                     })
                 })
             }
@@ -396,15 +421,19 @@ const pokemonFetch = async () => {
         
             deleteIcon.forEach((delbtn) => {
                 delbtn.addEventListener('click', () => {
-                    let delelmnt= delbtn.parentElement,
+                    let sure = confirm('Are you sure?')
+                    
+                    if (sure) {
+                        let delelmnt= delbtn.parentElement,
                         delelmnt2= delelmnt.parentElement
                     
-                    let i = pokemonList.findIndex((elem) => {
-                        return elem.pokemonId === parseInt(delbtn.id)
-                    })
+                        let o = pokemonList.findIndex((elem) => {
+                            return elem.pokemonId === parseInt(delbtn.id)
+                        })
 
-                    pokemonList.splice(i,1)
-                    delelmnt2.remove()
+                        pokemonList.splice(o,1)
+                        delelmnt2.remove()
+                    }
                 })
             })
 

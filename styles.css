@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700;800&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 body {
@@ -115,6 +117,21 @@ body {
     margin-top: 1em;
     border-bottom: 2px solid rgba(0, 0, 0, 0.41);
     padding-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.editinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.editinfo p{
+    font-size: 1em;
+    background-color: rgba(245, 245, 245, 0.361);
+    padding: .2em;
+    border-radius: .3em;
+    margin-bottom: .5em;
 }
 
 .editable {
@@ -138,8 +155,15 @@ body {
 }
 .editsection button:hover {
     cursor: pointer;
-    border-color: rgba(7, 151, 177, 0.215);
-    background-color: white;
+    border-color: whitesmoke;
+    background-color: rgba(4, 249, 188, 0.902);
+    color: black;
+}
+
+.editicon:hover {
+    cursor: pointer;
+    border:3px solid rgb(0, 191, 255);
+    border-radius: 50%;
 }
 
 .cross img {
@@ -175,7 +199,7 @@ tbody tr td img {
     width: 1.8em;
 }
 
-tbody tr td img:hover, .editicon:hover , .cross img:hover {
+tbody tr td img:hover, .cross img:hover {
     cursor: pointer;
     border:3px solid rgb(255, 0, 0);
     border-radius: 50%;
