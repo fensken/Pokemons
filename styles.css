@@ -129,10 +129,10 @@ body {
 }
 .editinfo p{
     font-size: 1em;
-    background-color: rgba(245, 245, 245, 0.361);
-    padding: .2em;
+    background-color: rgba(245, 245, 245, 0.046);
+    padding: .5em;
     border-radius: .3em;
-    margin-bottom: .5em;
+    margin-bottom: .7em;
 }
 
 .editable {
