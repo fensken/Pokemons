@@ -1,1 +1,1 @@
-List of pokemons
+List of pokemons.
